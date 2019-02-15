@@ -1,0 +1,48 @@
+#bgImage{
+    /* background-image: url("https://image.freepik.com/free-photo/grunge-wooden-cutting-board-with-copy-space-design-make-food-background_3249-2126.jpg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .5;
+}
+body {
+    background-color: rgba(196, 138, 12, 0.523);
+    padding-top: 15px;
+}
+
+h1 { 
+    font-family: Lato; font-size: 55px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+ }
+
+ .uk-h3, h3 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    padding-top: 0;
+    margin-top: 5px;
+}
+
+.uk-card{
+    margin-bottom: 10px;
+    width: 500px;
+    height: auto;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+.uk-card input {
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.uk-button .uk-button-default{
+    float: right;
+}
+
+button{
+    margin-right: 10px;
+    font-size: 20px;
+    /* border-radius: 3px */
+}
+
+#nutritionTableCard {
+    text-align: left;
+}
