@@ -8,10 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- jQuery -->
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
 
   <!-- UIkit CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
@@ -27,23 +25,23 @@
 
 
 
-    <a href="#offcanvas-slide" class="uk-button uk-button-default" uk-toggle>Menu</a>
+  <a href="#offcanvas-slide" class="uk-button uk-button-default" uk-toggle>Menu</a>
 
-    <div id="offcanvas-slide" uk-offcanvas="flip: true">
-        <div class="uk-offcanvas-bar">
-    
-            <ul class="uk-nav uk-nav-default">
-                <li class="uk-active"><a href="#">Active</a></li>
-                <li class="uk-nav-header">Header</li>
-                <li class="uk-nav-divider"></li>
+  <div id="offcanvas-slide" uk-offcanvas="flip: true">
+    <div class="uk-offcanvas-bar">
 
-                <li><a href="#">Opening Page</a></li>
-                <li><a href="#">About Spork</a></li>
-                <li><a href="#">Recommended Reading</a></li>
-            </ul>
-    
-        </div>
+      <ul class="uk-nav uk-nav-default">
+        <li class="uk-active"><a href="#">Active</a></li>
+        <li class="uk-nav-header">Header</li>
+        <li class="uk-nav-divider"></li>
+
+        <li><a href="#">Opening Page</a></li>
+        <li><a href="#">About Spork</a></li>
+        <li><a href="#">Recommended Reading</a></li>
+      </ul>
+
     </div>
+  </div>
 
 
 
@@ -51,73 +49,102 @@
 
   <div id="bgImage"></div>
   <div>
-  <h1 class="uk-heading-divider">Spork</h1>
-  
+    <h1 class="uk-heading-divider">Spork</h1>
+
   </div>
   <h3>the meal maker platform</h3>
   </div>
-<!-- joe look at the line below to start fixing ther css -->
-  <div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid>
-    <div>
-      <div class="uk-card uk-card-default uk-card-body">
-        <input type="text" placeholder="Ingredient/ Item Name" class="uk-input uk-form-width-large" id="food-name">
-        <!-- ↓↓↓↓ -->
-        <div class="uk-margin"></div>
-        <input class="uk-input uk-form-width-large" type="text" placeholder="Amount/ Portion Size">
-        <select id="sizeForm">
-          <option value="">Size</option>
-          <option value="ounces">Ounces</option>
-          <option value="cup">Cup</option>
-          <option value="large">Large</option>
-        </select>
-        <div>
-
-          <div class="uk-margin">
-            <input class="uk-input uk-form-width-large" type="text" placeholder="Quantity">
-          </div id="buttonEntryRow">
-          <button id="itemSubmitButton">Submit Item</button><button id="add-ingredient">Add Ingredient</button><button
-            id="doneButton">Done</button>
-        </div>
+  <!-- joe look at the line below to start fixing ther css -->
+  <!-- <div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid> -->
+  <div>
+    <div class="uk-card uk-card-default uk-card-body">
+      <input type="text" placeholder="Ingredient/ Item Name" class="uk-input uk-form-width-large" id="food-name">
+      <!-- ↓↓↓↓ -->
+      <div class="uk-margin"></div>
+      <input class="uk-input uk-form-width-large" type="text" placeholder="Amount/ Portion Size">
+      <select id="sizeForm">
+        <option value="">Size</option>
+        <option value="ounces">Ounces</option>
+        <option value="cup">Cup</option>
+        <option value="large">Large</option>
+      </select>
+      <div>
+        <div class="uk-margin">
+          <input class="uk-input uk-form-width-large" type="text" placeholder="Quantity">
+        </div id="buttonEntryRow">
+        <button id="itemSubmitButton">Submit Item</button><button id="doneButton">Done</button>
       </div>
-       <!--Im pretty sure this is generally where we want most of the items. If any questioins about location of buttons or other items please let me know where you think they should be  -->
-      <!-- though i had more time to work on nav bar. I will be able to get to it on friday so give me a bit of time there. -->
     </div>
-    <div>
-      <div id="nutritionTableCard" class="uk-card uk-card-default uk-card-body">
-        <table class="table" id="ingredients">
+    <!--Im pretty sure this is generally where we want most of the items. If any questioins about location of buttons or other items please let me know where you think they should be  -->
+    <!-- though i had more time to work on nav bar. I will be able to get to it on friday so give me a bit of time there. -->
+  </div>
+  <div>
+    <div id="currentitemNutritionTableCard" class="uk-card uk-card-default uk-card-body">
+      <p>Facts for this item:</p>
+      <table class="table" id="ingredients">
         <tr>
           <th>Ingredient</th>
           <th>Calories</th>
         </tr>
-      </table>
         <p>Food: <span id="food"></span></p>
         <p>Calories: <span id="calories"></span></p>
         <p>Carbs: <span id="carbs"></span></p>
         <p>Protein: <span id="protein"></span></p>
         <p>Fat: <span id="fat"></span></p>
-      </div>
-
-      
-      <div>Total Calories for this Meal: <span id="total-ingredients-calories"></span></div>
+        <button id="add-ingredient">Add Ingredient</button>
+      </table>
     </div>
-    <div>
-      <div class="uk-card uk-card-default uk-card-body">Recipe Suggestions
-        <button id="search-button">Search</button>
-        <button id="find-recipes">Find Recipes</button>
-
-        <table class="table" id="recipes-table">
-          <tr>
-            <th>Name</th>
-            <th>Image</th>
-            <th>Total Calories</th>
-          </tr>
+    <div id="totalNutritionCard" class="uk-card uk-card-default uk-card-body">
+      <p>Total Recipe Nutrition Facts:</p>
+      <table class="table" id="ingredients" class="uk-column-1-2">
+        <tr>
+          <th>Ingredient</th>
+          <th>Calories</th>
+        </tr>
+        <p>Food: <span id="food"></span></p>
+        <p>Calories: <span id="calories"></span><span id="total-ingredients-calories"></span></p>
+        <p>Carbs: <span id="carbs"></span></p>
+        <p>Protein: <span id="protein"></span></p>
+        <p>Fat: <span id="fat"></span></p>
+      </table>
+    </div>
+    <div>Total Calories for this Meal: <span id="total-ingredients-calories"></span></div>
+  </div>
+  <div>
+      <table>
+          <thead>
+            <tr>
+              <th>Food/Item Name</th>
+              <th>Calories</th>
+              <th>Fat</th>
+              <th>Sodium</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-column="ItemName">0</td>
+              <td data-column="Calories">0<span id="total-ingredients-calories"></span></td>
+              <td data-column="Fat">0</td>
+              <td data-column="Sodium">0</td>
+            </tr>
+          </tbody>
         </table>
-      </div>
+    <div class="uk-card uk-card-default uk-card-body">Recipe Suggestions
+      <button id="search-button">Search</button>
+      <button id="find-recipes">Find Recipes</button>
+      <table class="table" id="recipes-table" class="uk-column-1-2">
+        <tr>
+          <th>Name</th>
+          <th>Image</th>
+          <th>Total Calories</th>
+        </tr>
+      </table>
     </div>
   </div>
-
-
   </div>
+
+
+  <!-- </div> -->
 
 
 
