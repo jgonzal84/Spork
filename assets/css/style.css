@@ -2,3 +2,7 @@
 body {
     background-image: url("./assets/images/wood.jpg");
 }
+
+p {
+    color: black;
+}
